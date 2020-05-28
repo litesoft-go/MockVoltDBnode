@@ -1,0 +1,4 @@
+#kubectl patch voltdbcluster voltdb --type "json" -p "[{\"op\": \"add\", \"path\": \"/spec/stoppedNodes/0\", \"value\": $1}]"
+#kubectl patch -f test_cr.yaml --type "json" -p "[{\"op\": \"add\", \"path\": \"/spec/stoppedNodes/-\", \"value\": $1}]" --dry-run -o yaml
+
+kubectl patch voltdbcluster voltdb --type "json" -p "[{\"op\": \"add\", \"path\": \"/spec/stoppedNodes/-\", \"value\": $1}]"

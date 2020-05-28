@@ -1,0 +1,18 @@
+apiVersion: voltdb.com/v1
+kind: VoltDBCluster
+metadata:
+  name: voltdb
+spec:
+  container:
+    image: "voltdb/voltdb-enterprise:9.3.0"
+    imagePullPolicy: "IfNotPresent"
+    resources:
+      requests:
+        cpu: "1"
+        memory: "4Gi"
+  maintenanceMode: false
+  replicas: 3
+  persistentVolume:
+    size: "1Gi"
+  stoppedNodes:
+  - -2

@@ -1,0 +1,1 @@
+kubectl get statefulset.apps/voltdb -o yaml

@@ -1,0 +1,1 @@
+docker run localhost:5000/voltdb-m5 voltdbk8s.py voltdb start --status=11780

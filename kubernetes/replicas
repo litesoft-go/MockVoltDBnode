@@ -1,0 +1,1 @@
+kubectl patch voltdbcluster voltdb --type "json" -p "[{\"op\": \"replace\", \"path\": \"/spec/replicas\", \"value\": $1}]"

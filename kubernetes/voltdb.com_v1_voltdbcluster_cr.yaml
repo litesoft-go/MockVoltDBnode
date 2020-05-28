@@ -1,0 +1,17 @@
+apiVersion: voltdb.com/v1
+kind: VoltDBCluster
+metadata:
+  name: voltdb
+spec:
+  replicas: 0
+  maintenanceMode: false
+  stoppedNodes:
+  - -1
+  persistentVolume:
+    size: "256Mi"
+  container:
+    image: "localhost:5000/voltdb-m5"
+    imagePullPolicy: "Always"
+    resources:
+      requests:
+        memory: "128Mi"

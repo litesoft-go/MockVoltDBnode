@@ -1,0 +1,4 @@
+go build -o MockVoltDB cmd/main.go
+echo DIR: .
+ls -la MockVoltDB
+cp MockVoltDB ~/go/bin/voltdb
